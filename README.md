@@ -14,9 +14,10 @@ In order to be able to compare data, we will be considering that the best nation
 Once the data was treated, cleaned, enriched, transformed and became useful, we exported the files as .csv and worked on them in SQL.
 You can find the queries in the following [link](https://github.com/lucasmigliano21/LM-Project3-ETL/tree/master/data#:~:text=women%20football%20analisis.sql).
 
+## Resources used in this project:
+
 ### Python - pandas
 ### Selenium
 ### Beautiful Soup
 ### MySQL
 ### Analysis
-
