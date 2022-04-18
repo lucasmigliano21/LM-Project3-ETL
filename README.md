@@ -1,6 +1,6 @@
 ![Image text](https://us.123rf.com/450wm/melnyk58/melnyk581905/melnyk58190501215/122981665-joven-futbolista-o-futbolista-con-pelo-largo-en-ropa-deportiva-y-botas-pateando-la-pelota-para-el-go.jpg?ver=6)
 
-# Club or National team results are more important to 'The Best' award?
+# Between Club or National team results, which have more weight in the decision of the 'The Best' player award?
 
 ### The objective of this analysis is to understand if the decision of each yearly award was influenced by the results of the players in their clubs or in their national teams.
 
