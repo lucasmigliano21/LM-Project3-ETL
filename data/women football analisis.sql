@@ -1,6 +1,6 @@
 create database football;
 
-select * from df2
+select * from results
 limit 100;
 
 create temporary table wins_year(
@@ -8,7 +8,7 @@ select max(counts) as counts, year
 from
 (
 select year, count(winner) as counts, winner
-from df2
+from results
 where year >= 2002
 and winner <> 'None'
 group by year, winner) as a
@@ -17,7 +17,7 @@ group by year);
 
 create temporary table wins_year_country(
 select year, count(winner) as counts, winner
-from df2
+from results
 where year >= 2002
 and winner <> 'None'
 group by year, winner);

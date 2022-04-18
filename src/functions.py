@@ -12,8 +12,8 @@ def column_cleaning(df):
     return df
 
 def filter(df):
-    ''' as 'the best' award started to be awarded in 2000, we will keep only rows after 2000'''
-    df = df.loc[(df['year'] >= 2000)]
+    ''' as 'the best' award started to be awarded in 2000 but Champions League has been played since 2002, we will keep only rows after 2002'''
+    df = df.loc[(df['year'] >= 2002)]
     df.reset_index(drop=True, inplace=True)
 
     return df
