@@ -30,3 +30,29 @@ def copy(df):
 
     df = df[['year', 'winner']].copy()
     return df
+
+
+def transform(i):
+    lst = []
+    for i in players:
+        i = i.text.replace('\n', ',,,').replace('  ', ',,,').split(',,,')
+        lst.append(i)
+    return lst
+
+
+
+def replacing(cham):
+    ''' replacing rows'''
+    cham['Champion'] = cham["Winner"] + " " + cham["Country"]
+    cham['Champion']=[c.replace('1. FFC', 'FFC Frankfurt') for c in cham.Champion]
+    cham['Champion']=[c.replace('1.', 'FFC Frankfurt') for c in cham.Champion]
+    cham = cham.drop(['Winner','Country'], axis=1)
+    cham['a']=[c.replace('Frankfurt', 'Germany') for c in cham.a]
+    cham['a']=[c.replace('Duisburg', 'Germany') for c in cham.a]
+    cham['a']=[c.replace('FF', 'Sweden') for c in cham.a]
+    cham = cham.drop('b', axis=1)
+    cham.rename(columns = {'a':'Country'}, inplace = True)
+    cham = cham.sort_values(by = ['Year'], ascending=True).reset_index().drop('index',axis=1)
+    cham['Champion']=[c.replace('Umeå IK', 'Umea IK') for c in cham.Champion]
+    cham['Champion']=[c.replace('VfL Wolfsburg', 'Wolfsburg') for c in cham.Champion]
+    return cham 
